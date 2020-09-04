@@ -3,7 +3,7 @@ public class Nota{
     private int nota;
 
     public Nota(int valor){
-        this.nota=valor;
+        this.setNota(valor);
     }
     
     private int getValor(){
@@ -11,8 +11,11 @@ public class Nota{
     }
 
     private void setNota(int valor){
-        this.nota=valor;
+        if(valor >= 0 && valor <=10)
+            this.nota=valor;
+        else System.out.println("Valor Incorrecto");
     }
+
     public int obtenerValor(){
         return this.getValor();
     }
